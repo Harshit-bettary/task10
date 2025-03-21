@@ -1,0 +1,137 @@
+API ENDPOINTS DOCUMENTATION
+
+BASE URL:http://localhost:3000/api/recipes
+
+1. Create a new recipe
+   POST/api/recipes
+   REQUESTBody
+  {"name": "Rice",
+  "ingredients": ["Rice", "Water"],
+  "instructions": "Boil rice in water.",
+  "category": "Indian"}
+
+  2. Get all recipes
+   GET/api/recipes  
+   RESPONSE
+   [
+    {
+      "_id": "67d964c8dc665f3da17d8387",
+      "name": "Pasta",
+      "ingredients": [
+        "Pasta,Eggs,Cheese"
+      ],
+      "instructions": "Mix and Cook",
+      "category": "Italian",
+      "createdAt": "2025-03-18T12:19:20.708Z"
+    },
+    {
+      "_id": "67dd33848a3b0387b92c3793",
+      "name": "Pizza",
+      "ingredients": [
+        "Dough,cheese,sauce,vegies"
+      ],
+      "instructions": "Spread and add topings",
+      "category": "Italian",
+      "createdAt": "2025-03-21T12:19:20.708Z",
+      "__v": 0
+    },
+    {
+      "_id": "67dd34338a3b0387b92c379a",
+      "name": "Vegetable curry",
+      "ingredients": [
+        "Potato,Tomato,Curryleaves,beans,spices,"
+      ],
+      "instructions": "Mix and Cook",
+      "category": "Indian",
+      "createdAt": "2025-03-21T09:41:07.526Z",
+      "__v": 0
+    },
+    {
+      "_id": "67dd34338a3b0387b92c379c",
+      "name": "Vegetable curry",
+      "ingredients": [
+        "Potato,Tomato,Curryleaves,beans,spices,"
+      ],
+      "instructions": "Mix and Cook",
+      "category": "Indian",
+      "createdAt": "2025-03-21T09:41:07.599Z",
+      "__v": 0
+    },
+    {
+      "_id": "67dd34c28a3b0387b92c379f",
+      "name": "PotatoFry",
+      "ingredients": [
+        "Potato,Chillipowder,oil,salt"
+      ],
+      "instructions": "Mix and Cook",
+      "category": "Indian",
+      "createdAt": "2025-03-21T09:43:30.082Z",
+      "__v": 0
+    },
+    {
+      "_id": "67dd34c28a3b0387b92c37a1",
+      "name": "PotatoFry",
+      "ingredients": [
+        "Potato,Chillipowder,oil,salt"
+      ],
+      "instructions": "Mix and Cook",
+      "category": "Indian",
+      "createdAt": "2025-03-21T09:43:30.170Z",
+      "__v": 0
+    },
+    {
+      "_id": "67dd37ed8a3b0387b92c37a3",
+      "name": "FriedEggs",
+      "ingredients": [
+        "Eggs,Pepper,oil,salt"
+      ],
+      "instructions": "Mix and Cook",
+      "category": "American",
+      "createdAt": "2025-03-21T09:57:01.368Z",
+      "__v": 0
+    },
+    {
+      "_id": "67dd382b8a3b0387b92c37a5",
+      "name": "SmashBurger",
+      "ingredients": [
+        "Eggs,Buns,oil,salt,Patty,Pepper,Veggies,Cheese"
+      ],
+      "instructions": "Stack one upon another",
+      "category": "American",
+      "createdAt": "2025-03-21T09:58:03.416Z",
+      "__v": 0
+    }
+  ]
+
+3.Get Recipe by ID
+GET /api/recipes/:id
+Ex: /api/recipes/67d964c8dc665f3da17d8387
+{
+    "_id": "67d964c8dc665f3da17d8387",
+    "name": "Pasta",
+    "ingredients": [
+      "Pasta,Eggs,Cheese"
+    ],
+    "instructions": "Mix and Cook",
+    "category": "Italian",
+    "createdAt": "2025-03-18T12:19:20.708Z"
+  }
+  
+
+4.Update Recipe
+PUT /api/recipes/:id
+REQUESTBody
+{"name": "Rice",
+  "ingredients": ["Rice", "Water"],
+  "instructions": "Boil rice in water.",
+  "category": "Indian"}
+Ex: PUT/api/recipes/67d964c8dc665f3da17d8387
+
+
+5.Delete Recipe
+DELETE /api/recipes/:id
+Ex: DELETE/api/recipes/67d964c8dc665f3da17d8387
+{
+    "message": "Recipe deleted successfully"
+}
+  
